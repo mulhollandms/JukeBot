@@ -18,9 +18,10 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.isMentioned(client.user)) {
-    msg.react('🤖');
-  }
+    if (msg.content.charAt(0) == config.prefix) {
+        console.log(msg.toString());
+        msg.react('🤖');
+    }
 });
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
