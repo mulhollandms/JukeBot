@@ -1,5 +1,6 @@
 {
-    "token": "<token goes here>",
-    "vc": "<voice channel ID>",
+    "token": "<bot token>",
+    "vc": "<voice channel id>",
+    "tc": "<text channel id>",
     "prefix": "!"
 }
