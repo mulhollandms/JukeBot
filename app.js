@@ -17,10 +17,23 @@ client.on('ready', () => {
   }
 });
 
+function handleCommand(msg) {
+    tokens = msg.split(' ');
+    switch(tokens[0]){
+        case 'play':
+            client.channels.get(config.tc).send(`Not supported yet! 🛠️`);
+            break;
+        default:
+            client.channels.get(config.tc).send(`Unsupported operation: ${tokens[0]}`);
+    }
+}
+
 client.on('message', msg => {
     if (msg.content.charAt(0) == config.prefix) {
         console.log(msg.toString());
         msg.react('🤖');
+
+        handleCommand(msg.content.substring(1));
     }
 });
 
