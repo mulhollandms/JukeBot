@@ -1,4 +1,5 @@
 {
     "token": "<token goes here>",
-    "vc": "<voice channel ID>"
+    "vc": "<voice channel ID>",
+    "prefix": "!"
 }
