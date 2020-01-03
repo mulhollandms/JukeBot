@@ -8,6 +8,14 @@ client.on('ready', () => {
   if (vc) {
     vc.join().then(conn=>{
         console.log(`Successfully joined: ${vc.name}`);
+        client.user.setActivity('Laying down some beats 🎶');
+        conn.on('error', (err) => {
+            console.error(err);
+        });
+        conn.on('speaking',(user, speaking)=>{
+            // ToDo
+        });
+        dispatcher = conn.playArbitraryInput('http://74.82.59.197:8440');
     }).catch(err=>{
         console.log(`Failed to join: ${vc.name}`);
         console.error(err);
