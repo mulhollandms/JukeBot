@@ -15,7 +15,7 @@ client.on('ready', () => {
         conn.on('speaking',(user, speaking)=>{
             // ToDo
         });
-        dispatcher = conn.playArbitraryInput('http://74.82.59.197:8440');
+        dispatcher = conn.playArbitraryInput('http://70.38.12.44:8144/');
     }).catch(err=>{
         console.log(`Failed to join: ${vc.name}`);
         console.error(err);
