@@ -2,5 +2,7 @@
     "token": "<bot token>",
     "vc": "<voice channel id>",
     "tc": "<text channel id>",
+    "owner": "<owner user id>",
+    "master": "<bot master role id>",
     "prefix": "!"
 }
